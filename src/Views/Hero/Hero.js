@@ -10,8 +10,11 @@ const Hero = () => (
 		<Logo />
 		<Header />
 		<div className={styles.button}>
-			<p className={styles.text}>Stay updated! New features coming.</p>
-			<p className={styles.text}>Newslatter form fill in.</p>
+			<div>
+				<p className={styles.text}>Stay updated! New features coming.</p>
+				<p className={styles.text}>Newslatter form fill in.</p>
+			</div>
+
 			<Button />
 		</div>
 
