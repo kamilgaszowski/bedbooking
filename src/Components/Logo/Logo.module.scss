@@ -1,0 +1,24 @@
+.wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    top: 2rem;
+    right: 2rem;
+    z-index: 2;
+
+}
+
+.logo_img{
+    height: 4rem;
+    font-weight: 900;
+}
+
+.logo_text {
+    font-size: 0.8rem;
+    color: #ffffff;
+
+    .booking {
+		color: #519c37;
+	}
+}
