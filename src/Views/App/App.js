@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
+import Hero from '../Hero/Hero';
 
-function Root() {
-  return (
+
+
+
+const App =() => (
     <div className="App">
-      <h1>BedBooking</h1>
+      <Hero/>
     </div>
   );
-}
 
-export default Root;
+export default App;
