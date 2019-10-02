@@ -6,16 +6,15 @@ import Logo from '../../Components/Logo/Logo';
 import Button from '../../Components/Button/Button';
 
 const Hero = () => (
-	<div className={styles.wrapper}>
+	<div className={styles.container}>
 		<Logo />
 		<Header />
 		<div className={styles.button}>
+			<Button />
 			<div>
 				<p className={styles.text}>Stay updated! New features coming.</p>
 				<p className={styles.text}>Newslatter form fill in.</p>
 			</div>
-
-			<Button />
 		</div>
 
 		<div className={styles.slider}>

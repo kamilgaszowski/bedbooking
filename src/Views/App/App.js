@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Hero from '../Hero/Hero';
+import FormView from '../FormView/FormView';
 
 
 
@@ -8,6 +9,7 @@ import Hero from '../Hero/Hero';
 const App =() => (
     <div className="App">
       <Hero/>
+      <FormView/>
     </div>
   );
 

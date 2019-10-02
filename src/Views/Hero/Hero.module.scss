@@ -2,31 +2,37 @@ $delay:  6s;
 
 @keyframes slider {
 	0% {
-		opacity: 0;
+        opacity: 0;
+
 		animation-timing-function: ease-in;
 	}
 	8% {
-		opacity: 1;
+        opacity: 1;
+
 		animation-timing-function: ease-out;
 	}
 	17% {
-		opacity: 1;
+        opacity: 1;
+
 	}
 	25% {
-		opacity: 0;
+        opacity: 0;
+
 	}
 	100% {
-		opacity: 0;
+
+        opacity: 0;
+
 	}
 }
 
-.wrapper {
+.container {
     height: 100vh;
     width: auto;
     position: relative;
     display: flex;
 	flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
     font-size: 1vw;
@@ -53,12 +59,13 @@ $delay:  6s;
 .slide {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     top: 0px;
     left: 0px;
-    background-size: cover;
+    transform: translate(0, 0);
+    background-size: auto;
+    background-repeat: no-repeat;
     background-position: 50% 50%;
-	background-attachment: fixed;
     animation: slider 36s linear infinite 0s;
     opacity: 0;
     z-index: 0;
@@ -93,22 +100,44 @@ $delay:  6s;
     animation-delay: 5 * $delay;
 }
 
-.button {
-    // position: absolute;
-	// bottom: 1.5rem;
-	// left: 50%;
-    // transform: translateX(-50%);
-    // align-self: flex-end;
+.wrapper {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
     z-index: 2;
+}
+.button {
+    position: absolute;
+	bottom: 5%;
+	left: 50%;
+    transform: translateX(-50%);
+    align-self: flex-end;
     margin: 0 0 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    z-index: 2;
 
     .text {
-        margin: .5rem;
-        font-size: 2em;
+        margin: .1rem;
+        font-size: .7rem;
+        font-weight: 300;
         color: #ffffff;
+    }
+}
+
+@media (min-width: 920px){
+    .button {
+        .text {
+            font-size: 1.4em;
+        }
+    }
+
+    .slide {
+        background-size: cover;
+        background-attachment: fixed;
     }
 }
