@@ -1,32 +1,46 @@
 .wrapper {
-	position: relative;
-    background-color: #434343;
-    display: flex;
+    position: relative;
+    background-image: url('https://i.postimg.cc/Wb6ScPzJ/phone-1.png');
+    background-attachment: fixed;
+    background-size: 20%;
+    background-position: 90% 60%;
+    background-repeat: no-repeat;
+	background-color: #434343;
+	display: flex;
     flex-direction: column;
-
+    align-items: center;
 }
 
 .description {
-    width: 90vw;
-    display: flex;
+	width: 90vw;
+	display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+
+	.paragraph {
+		width: 50vw;
+		margin: 0 2rem;
+		font-size: 2.5em;
+		color: #ffffff;
+		text-align: left;
+		font-weight: 500;
+	}
+
+	.image {
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
 }
 
-.paragraph {
-    width: 50%;
-    margin: 0 2rem;
-    font-size: 2.5em;
-    color: #ffffff;
-    text-align: left;
-    font-weight: 500;
-}
-
-.image {
-    width: 50%;
-    height: 10%;
-
-    img {
-        width: 30vw;
-        height: auto;
-    }
-}
+// @media (max-width: 500px) {
+// 	.image {
+//         width: 10%;
+// 		img {
+// 			width: auto;
+// 			height: 10%;
+// 		}
+// 	}
+// }
