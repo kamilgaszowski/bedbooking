@@ -1,0 +1,54 @@
+
+
+.header_form {
+    font-size: 4em;
+    color: #65AE01;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    color: #ffffff;
+
+
+
+    .input {
+        border: none;
+        margin: 0 0 1rem;
+        border-radius: 0;
+        width: 60vw;
+        border-bottom: 2px solid #ffffff;
+        background: transparent;
+        color: #ffffff;
+
+        &:focus{
+            border-bottom: 2px solid #65AE01;
+            outline: none;
+        }
+    }
+
+}
+
+
+
+.radio {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: .5rem;
+    color: #ffffff;
+}
+
+.date {
+    display: none;
+}

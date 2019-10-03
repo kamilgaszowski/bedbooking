@@ -7,10 +7,10 @@ import Button from '../../Components/Button/Button';
 
 const Hero = () => (
 	<div className={styles.container}>
-		<Logo />
+		<Logo right/>
 		<Header />
 		<div className={styles.button}>
-			<Button />
+			<Button link/>
 			<div>
 				<p className={styles.text}>Stay updated! New features coming.</p>
 				<p className={styles.text}>Newslatter form fill in.</p>

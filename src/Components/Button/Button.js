@@ -1,8 +1,15 @@
 import React from 'react';
 import styles from './Button.module.scss';
 
-const Button = () => (
-    <button className={styles.button} type='button'>Subscribe</button>
+const Button = ({link}) => (
+<>
+    {link ? (
+        <a className={styles.button} a href='#form'>Subscribe</a>
+    ) : (
+        <button className={styles.button} type='submit'>Send</button>
+    )
+}
+</>
 );
 
 export default Button;
