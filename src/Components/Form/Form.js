@@ -54,16 +54,7 @@ const FormComponent = () => {
 					}, 400);
 				}}
 			>
-				{({
-					values,
-					errors,
-					touched,
-					handleChange,
-					handleBlur,
-					handleSubmit,
-					isSubmitting
-					/* and other goodies */
-				}) => (
+				{({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
 					<form className={styles.form} onSubmit={handleSubmit} autoComplete="off">
 						<div className={styles.inputs}>
 							<div className={styles.input_wrapper}>
@@ -77,7 +68,7 @@ const FormComponent = () => {
 									onBlur={handleBlur}
 									value={values.name}
 								/>
-                                <ErrorMessage component={Hint} name="name" text={errors.name}/>
+								<ErrorMessage component={Hint} name="name" text={errors.name} />
 							</div>
 							{/* {errors.name && touched.name ? <div>{errors.name}</div> : null} */}
 
@@ -92,9 +83,8 @@ const FormComponent = () => {
 									onBlur={handleBlur}
 									value={values.company}
 								/>
-                                <ErrorMessage component={Hint} name="company" text={errors.company}/>
+								<ErrorMessage component={Hint} name="company" text={errors.company} />
 							</div>
-
 						</div>
 						<div className={styles.inputs}>
 							<div className={styles.input_wrapper}>
@@ -107,8 +97,9 @@ const FormComponent = () => {
 									onChange={handleChange}
 									onBlur={handleBlur}
 									value={values.email}
+									placeholder=" "
 								/>
-                                <ErrorMessage component={Hint} name="email" text={errors.email}/>
+								<ErrorMessage component={Hint} name="email" text={errors.email} />
 							</div>
 
 							<div className={styles.input_wrapper}>
@@ -122,7 +113,7 @@ const FormComponent = () => {
 									onBlur={handleBlur}
 									value={values.country}
 								/>
-                                <ErrorMessage component={Hint} name="country" text={errors.country}/>
+								<ErrorMessage component={Hint} name="country" text={errors.country} />
 							</div>
 						</div>
 						<div className={styles.inputs}>
@@ -137,7 +128,7 @@ const FormComponent = () => {
 									onBlur={handleBlur}
 									value={values.number}
 								/>
-                                <ErrorMessage component={Hint} name="number" text={errors.number}/>
+								<ErrorMessage component={Hint} name="number" text={errors.number} />
 							</div>
 
 							<div className={styles.input_wrapper}>
@@ -190,10 +181,15 @@ const FormComponent = () => {
 								// value={values.agreement}
 								chacked={values.agreement}
 							/>
-							<p>I agree to the processing of data in accordance with the BedBooking privacy policy</p>
-                            <ErrorMessage component={Hint} name="agreement" text={errors.agreement}/>
-						</div>
 
+								<div className={styles.radio_button} />
+								<p>
+									I agree to the processing of data in accordance with the BedBooking privacy policy
+								</p>
+
+
+							<ErrorMessage component={Hint} name="agreement" text={errors.agreement} />
+						</div>
 
 						<div className={styles.date}>
 							<input
