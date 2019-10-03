@@ -8,14 +8,13 @@ const FormView = () => (
 		<Logo />
 		<div className={styles.description}>
 			<div className={styles.paragraph}>
-					<p>
-						BedBooking is an innovative calendar that has already helped thousands of people around the
-						world manage their business more efficiently. Be the first to inform you about upcoming
-						application features and attractive promotions.
-					</p>
+				<p>
+					BedBooking is an innovative calendar that has already helped thousands of people around the world
+					manage their business more efficiently. Be the first to inform you about upcoming application
+					features and attractive promotions.
+				</p>
 
-                    <Form />
-
+				<Form />
 			</div>
 		</div>
 	</div>

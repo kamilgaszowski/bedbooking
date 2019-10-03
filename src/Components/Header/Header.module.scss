@@ -1,28 +1,26 @@
 .header {
 	position: relative;
-
 	font-size: 8em;
 	font-weight: 900;
 	color: #ffffff;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-    background: transparent;
-    z-index: 2;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+	background: transparent;
+	z-index: 2;
 
 	.booking {
 		color: #519c37;
 	}
-
 }
-.header::after, .header::before {
-    position: absolute;
-    font-size: 0.4em;
-    font-weight: 700;
+.header::after,
+.header::before {
+	position: absolute;
+	font-size: 0.4em;
+	font-weight: 700;
 }
 .header::before {
 	content: 'Your';
 	top: -20%;
-    color: #519c37;
-
+	color: #519c37;
 }
 
 .header::after {
@@ -31,9 +29,8 @@
 	right: 0;
 }
 
-
 @media (max-width: 720px) {
 	.header {
-	  font-size: 12em;
+		font-size: 12em;
 	}
-  }
+}

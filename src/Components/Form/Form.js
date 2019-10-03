@@ -182,11 +182,8 @@ const FormComponent = () => {
 								chacked={values.agreement}
 							/>
 
-								<div className={styles.radio_button} />
-								<p>
-									I agree to the processing of data in accordance with the BedBooking privacy policy
-								</p>
-
+							<div className={styles.radio_button} />
+							<p>I agree to the processing of data in accordance with the BedBooking privacy policy</p>
 
 							<ErrorMessage component={Hint} name="agreement" text={errors.agreement} />
 						</div>
