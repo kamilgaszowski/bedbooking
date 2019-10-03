@@ -1,0 +1,37 @@
+.hint {
+	position: absolute;
+	top: -60px;
+	left: 0;
+}
+
+.shape {
+	position: relative;
+	display: flex;
+	// flex-direction: column;
+	// justify-content: center;
+	// align-items: center;
+}
+
+.shape  {
+	font-size: 1.3em;
+	padding: 1px 10px;
+	position: absolute;
+	width: auto;
+	height: auto;
+	color: #ffffff;
+	background: #65ae01;
+	line-height: 30px;
+
+	border-radius: 6px;
+}
+.shape::after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border-top: 8px solid #65ae01;
+	border-right: 8px solid transparent;
+	border-left: 8px solid transparent;
+}

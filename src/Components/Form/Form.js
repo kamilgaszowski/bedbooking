@@ -2,7 +2,8 @@ import React from 'react';
 import styles from './Form.module.scss';
 import Button from '../Button/Button';
 
-import { Formik } from 'formik';
+import { Formik, ErrorMessage } from 'formik';
+import Hint from '../Hint/Hint';
 
 const FormComponent = () => {
 	const today = new Date();
@@ -48,7 +49,7 @@ const FormComponent = () => {
 				}}
 				onSubmit={(values, { setSubmitting }) => {
 					setTimeout(() => {
-						alert(JSON.stringify(values, null, 2));
+						console.log(JSON.stringify(values, null, 2));
 						setSubmitting(false);
 					}, 400);
 				}}
@@ -66,7 +67,7 @@ const FormComponent = () => {
 					<form className={styles.form} onSubmit={handleSubmit} autoComplete="off">
 						<div className={styles.inputs}>
 							<div className={styles.input_wrapper}>
-								<label>Name</label>
+								<label className={styles.label}>Name</label>
 								<input
 									autoComplete={values.name}
 									className={styles.input}
@@ -76,11 +77,12 @@ const FormComponent = () => {
 									onBlur={handleBlur}
 									value={values.name}
 								/>
+                                <ErrorMessage component={Hint} name="name" text={errors.name}/>
 							</div>
-							{errors.name && touched.name && errors.name}
+							{/* {errors.name && touched.name ? <div>{errors.name}</div> : null} */}
 
 							<div className={styles.input_wrapper}>
-								<label>Company</label>
+								<label className={styles.label}>Company</label>
 								<input
 									autoComplete={values.company}
 									className={styles.input}
@@ -90,12 +92,13 @@ const FormComponent = () => {
 									onBlur={handleBlur}
 									value={values.company}
 								/>
+                                <ErrorMessage component={Hint} name="company" text={errors.company}/>
 							</div>
-							{errors.company && touched.company && errors.company}
+
 						</div>
 						<div className={styles.inputs}>
 							<div className={styles.input_wrapper}>
-								<label>E-mail</label>
+								<label className={styles.label}>E-mail</label>
 								<input
 									autoComplete={values.email}
 									className={styles.input}
@@ -105,11 +108,11 @@ const FormComponent = () => {
 									onBlur={handleBlur}
 									value={values.email}
 								/>
+                                <ErrorMessage component={Hint} name="email" text={errors.email}/>
 							</div>
-							{errors.email && touched.email && errors.email}
 
 							<div className={styles.input_wrapper}>
-								<label>Country</label>
+								<label className={styles.label}>Country</label>
 								<input
 									autoComplete={values.country}
 									className={styles.input}
@@ -119,12 +122,12 @@ const FormComponent = () => {
 									onBlur={handleBlur}
 									value={values.country}
 								/>
+                                <ErrorMessage component={Hint} name="country" text={errors.country}/>
 							</div>
-							{errors.company && touched.company && errors.company}
 						</div>
 						<div className={styles.inputs}>
 							<div className={styles.input_wrapper}>
-								<label>Phone number</label>
+								<label className={styles.label}>Phone number</label>
 								<input
 									autoComplete={values.number}
 									className={styles.input}
@@ -134,11 +137,11 @@ const FormComponent = () => {
 									onBlur={handleBlur}
 									value={values.number}
 								/>
+                                <ErrorMessage component={Hint} name="number" text={errors.number}/>
 							</div>
-							{errors.number && touched.number && errors.number}
 
 							<div className={styles.input_wrapper}>
-								<label>Address</label>
+								<label className={styles.label}>Address</label>
 								<input
 									autoComplete={values.addres}
 									className={styles.input}
@@ -152,7 +155,7 @@ const FormComponent = () => {
 						</div>
 						<div className={styles.inputs}>
 							<div className={styles.input_wrapper}>
-								<label>Post code</label>
+								<label className={styles.label}>Post code</label>
 								<input
 									autoComplete={values.code}
 									className={styles.input}
@@ -165,7 +168,7 @@ const FormComponent = () => {
 							</div>
 
 							<div className={styles.input_wrapper}>
-								<label>City</label>
+								<label className={styles.label}>City</label>
 								<input
 									autoComplete={values.city}
 									className={styles.input}
@@ -188,8 +191,9 @@ const FormComponent = () => {
 								chacked={values.agreement}
 							/>
 							<p>I agree to the processing of data in accordance with the BedBooking privacy policy</p>
+                            <ErrorMessage component={Hint} name="agreement" text={errors.agreement}/>
 						</div>
-						{errors.agreement && touched.agreement && errors.agreement}
+
 
 						<div className={styles.date}>
 							<input

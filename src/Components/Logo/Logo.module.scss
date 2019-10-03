@@ -1,9 +1,15 @@
-.wrapper_right {
+.wrapper {
     z-index: 2;
     position: absolute;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+
+
+}
+
+.wrapper_right {
+    @extend .wrapper;
+    align-items: center;
+    flex-direction: column;
 	top: 1.5rem;
     right: 1.5rem;
 
@@ -26,11 +32,9 @@
 
 
 .wrapper_left {
-
-    z-index: 2;
+    @extend .wrapper;
+    background: transparent;
     margin: 2rem 1.5rem;
-    display: flex;
-    flex-direction: row;
     justify-content: flex-start;
 	align-items: center;
 	top: 1.5rem;
